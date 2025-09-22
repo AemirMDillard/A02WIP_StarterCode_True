@@ -10,7 +10,7 @@ public class ThrusterModule extends AModule {
     }
     @Override
     public void statusReport(String moduleStatus, boolean isSuccessful){
-        System.out.println(this.getName() + ": " + this.fuel + " units of fuel remaining. Last fired: " + (this.lastFired ? "Yes" : "No"));
+        System.out.println(super.getName() + ": " + this.fuel + " units of fuel remaining. Last fired: " + (this.lastFired ? "Yes" : "No"));
         super.statusReport(moduleStatus, isSuccessful);
     }
 
@@ -18,9 +18,11 @@ public class ThrusterModule extends AModule {
         if (this.fuel >= 5 && availablePower >= 5) {
             this.fuel -= 5;
             this.lastFired = true;
+            System.out.println("ThrusterModule is Firing");
             System.out.println("ALERT Captain: 5 fuel used for propulsion maneuver.");
             return true;
         } else {
+            System.out.println("ThrusterModule is Lack of Power");
             System.out.println("ThrusterModule: Not enough power or fuel to fire.");
             return false;
         }
