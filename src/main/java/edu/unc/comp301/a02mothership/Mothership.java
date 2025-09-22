@@ -45,9 +45,8 @@ public class Mothership {
         return experimentModule.getSummary();
     }
     public void printStatusReports(){
-        this.powerGenerator.statusReport("Normal", true);
-        this.thrusterModule.statusReport("Normal", true);
-        this.experimentModule.statusReport("Normal", true);
-        this.alienGenerator.statusReport("Normal", true);
+        for (IModule module : moduleList) {
+            module.statusReport("Normal", true);
+        }
     }
 }
