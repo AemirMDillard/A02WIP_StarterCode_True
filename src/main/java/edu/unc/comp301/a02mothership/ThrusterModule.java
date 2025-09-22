@@ -4,14 +4,14 @@ package edu.unc.comp301.a02mothership;
 
 public class ThrusterModule extends AModule {
     private int fuel = 100;
-    private boolean lastFired;
+    private boolean lastFired = false;
     public ThrusterModule() {
         super("ThrusterModule");
     }
     @Override
     public void statusReport(String moduleStatus, boolean isSuccessful){
         System.out.println(super.getName() + ": " + this.fuel + " units of fuel remaining. Last fired: " + (this.lastFired ? "Yes" : "No"));
-        super.statusReport(moduleStatus, isSuccessful);
+        super.statusReport(moduleStatus, this.lastFired);
     }
 
     public boolean thrust(int availablePower){
