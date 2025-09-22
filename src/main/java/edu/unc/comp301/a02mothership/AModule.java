@@ -9,9 +9,9 @@ public abstract class AModule implements IModule {
         return this.moduleName;
     }
     public void statusReport(String moduleStatus, boolean isSuccessful) {
-        System.out.println(this.moduleName + " iss Initializing");
+        System.out.println(this.moduleName + " is Initializing");
         if (isSuccessful) {
-            System.out.println("Action Successful");
+            System.out.println("Action Successful.");
         } else {
             System.out.println(this.moduleName + " needs immediate attention!");
         }
