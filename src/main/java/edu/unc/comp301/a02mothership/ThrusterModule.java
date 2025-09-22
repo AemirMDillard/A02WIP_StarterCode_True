@@ -5,8 +5,8 @@ package edu.unc.comp301.a02mothership;
 public class ThrusterModule extends AModule {
     private int fuel = 100;
     private boolean lastFired;
-    public ThrusterModule(String moduleName) {
-        super(moduleName);
+    public ThrusterModule() {
+        super("ThrusterModule");
     }
     @Override
     public void statusReport(String moduleStatus, boolean isSuccessful){
