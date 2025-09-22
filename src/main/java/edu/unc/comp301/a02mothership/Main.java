@@ -3,7 +3,7 @@ package edu.unc.comp301.a02mothership;
 public class Main {
     public void main(String[] args){
         ThrusterModule thruster = new ThrusterModule();
-        thruster.statusReport("Normal", true);
+        thruster.statusReport("Normal", false);
 
 
         FuelGenerator powerGenerator = new FuelGenerator(20);
