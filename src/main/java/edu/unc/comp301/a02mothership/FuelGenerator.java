@@ -11,10 +11,16 @@ public class FuelGenerator extends AModule implements IPowerGenerator {
         super.statusReport(moduleStatus, isSuccessful);
     }
     public int generatePower(){
+        if (this.fuel <= 0) {
+            System.out.println("Fuel Generator is Warning");
+            return 0;
+        }
         if (this.fuel >= 10) {
+            System.out.println("Fuel Generator is Generating Fuel");
             this.fuel -= 10;
             return 10;
         } else {
+            System.out.println("Fuel Generator is Generating Fuel");
             int temp = this.fuel;
             this.fuel = 0;
             return temp;

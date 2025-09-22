@@ -10,7 +10,7 @@ public class ThrusterModule extends AModule {
     }
     @Override
     public void statusReport(String moduleStatus, boolean isSuccessful){
-        System.out.println(this.getName() + ": " + this.fuel + " units of fuel remaining. Last fired: " + this.lastFired);
+        System.out.println(this.getName() + ": " + this.fuel + " units of fuel remaining. Last fired: " + (this.lastFired ? "Yes" : "No"));
         super.statusReport(moduleStatus, isSuccessful);
     }
 
