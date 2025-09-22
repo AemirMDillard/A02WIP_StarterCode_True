@@ -27,8 +27,8 @@ public class Mothership {
         experimentModule.runExperiment();
     }
 
-    public void getExperimentSummary() {
-        experimentModule.getSummary();
+    public String getExperimentSummary() {
+        return experimentModule.getSummary();
     }
     public void printStatusReports(){
         this.powerGenerator.statusReport("Normal", true);
