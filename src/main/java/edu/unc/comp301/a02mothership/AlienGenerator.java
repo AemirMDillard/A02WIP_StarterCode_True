@@ -6,15 +6,16 @@ public class AlienGenerator extends AModule implements IPowerGenerator {
     private int alienpower;
     private boolean alienrevolt;
 
-    public AlienGenerator(String moduleName) {
-        super(moduleName);
+    public AlienGenerator() {
+        super("Alien Generator");
         this.aliens = 0;
         this.alienpower = 0;
     }
 
     public int findAliens(){
         // find a random number of aliens
-        return (int)(Math.random() * 1.5);
+        aliens += (int)(Math.random() * 5);
+        return aliens;
     }
 
     @Override
